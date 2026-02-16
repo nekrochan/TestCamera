@@ -47,7 +47,7 @@ class VideoFragment : Fragment() {
     private var isRecording = false
     private var mediaStoreOutputOptions: MediaStoreOutputOptions? = null
 
-    private val scaleGestureDetector by lazy {
+    private val scaleGestureDetector by lazy {  // масштабирование пальцами
         ScaleGestureDetector(requireContext(), object : ScaleGestureDetector.SimpleOnScaleGestureListener() {
             override fun onScale(detector: ScaleGestureDetector): Boolean {
                 val oldZoom = camera?.cameraInfo?.zoomState?.value ?: return false
@@ -212,7 +212,7 @@ class VideoFragment : Fragment() {
         }
     }
 
-    private fun setupGestures() {
+    private fun setupGestures() {  // фокус по касанию
         val viewFinder = binding.previewView
         viewFinder.setOnTouchListener { view, event ->
             scaleGestureDetector.onTouchEvent(event)

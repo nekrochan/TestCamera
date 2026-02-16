@@ -26,7 +26,7 @@ class MediaAdapter(
     override fun onBindViewHolder(holder: GalleryViewHolder, position: Int) {
         val file = files[position]
 
-        Glide.with(holder.binding.root).load(file).into(holder.binding.thumb) // для превью медиафайлов
+        Glide.with(holder.binding.root).load(file).into(holder.binding.thumb) // отображение превью медиафайлов
 
         if (file.extension == "mp4") {
             holder.binding.videoIcon.visibility = View.VISIBLE

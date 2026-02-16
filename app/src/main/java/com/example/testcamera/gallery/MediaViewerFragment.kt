@@ -30,7 +30,7 @@ class MediaViewerFragment : Fragment() {
         if (file.extension != "mp4") {
             binding.videoView.visibility = View.GONE
             binding.imageView.visibility = View.VISIBLE
-            Glide.with(this).load(file).into(binding.imageView) //
+            Glide.with(this).load(file).into(binding.imageView) // отображение превью
         } else {
             binding.imageView.visibility = View.GONE
             binding.videoView.visibility = View.VISIBLE

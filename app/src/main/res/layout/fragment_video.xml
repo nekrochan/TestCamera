@@ -17,7 +17,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-
     </androidx.camera.view.PreviewView>
 
     <androidx.constraintlayout.widget.ConstraintLayout

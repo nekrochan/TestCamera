@@ -36,7 +36,7 @@ class PhotoFragment : Fragment() {
     private var camera: Camera? = null
     private var cameraSelector = CameraSelector.DEFAULT_BACK_CAMERA
 
-    private val scaleGestureDetector by lazy {
+    private val scaleGestureDetector by lazy {  // масштабирование пальцами
         ScaleGestureDetector(requireContext(), object : ScaleGestureDetector.SimpleOnScaleGestureListener() {
             override fun onScale(detector: ScaleGestureDetector): Boolean {
                 val oldZoom = camera?.cameraInfo?.zoomState?.value ?: return false
@@ -114,7 +114,7 @@ class PhotoFragment : Fragment() {
         )
     }
 
-    private fun setupGestures() {
+    private fun setupGestures() {  // фокус касанием
         val viewFinder = binding.previewView
         viewFinder.setOnTouchListener { view, event ->
             scaleGestureDetector.onTouchEvent(event)
